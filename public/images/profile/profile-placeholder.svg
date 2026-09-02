@@ -1,0 +1,15 @@
+<svg width="800" height="1000" viewBox="0 0 800 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="1000" rx="48" fill="url(#bg)"/>
+  <circle cx="400" cy="330" r="165" fill="#D9E3FF" fill-opacity="0.9"/>
+  <path d="M270 760C284 630 326 570 400 570C474 570 516 630 530 760H270Z" fill="#D9E3FF" fill-opacity="0.9"/>
+  <path d="M340 268C340 219.4 378.4 181 427 181H476C524.6 181 563 219.4 563 268V312C563 360.6 524.6 399 476 399H427C378.4 399 340 360.6 340 312V268Z" fill="#A4B6FF" fill-opacity="0.35"/>
+  <path d="M341 286L402 242L439 264L494 244L550 297V371H341V286Z" fill="#0F172A" fill-opacity="0.18"/>
+  <rect x="110" y="860" width="580" height="58" rx="29" fill="#111827" fill-opacity="0.22"/>
+  <text x="400" y="923" text-anchor="middle" fill="#E5ECFF" font-family="Arial, sans-serif" font-size="28" letter-spacing="3">PROFILE PHOTO</text>
+  <defs>
+    <linearGradient id="bg" x1="63" y1="49" x2="754" y2="963" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#151E35"/>
+      <stop offset="1" stop-color="#0A1120"/>
+    </linearGradient>
+  </defs>
+</svg>

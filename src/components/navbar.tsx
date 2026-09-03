@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { ArrowUpRight, Code2, Link2, Menu, Moon, Sun, X } from "lucide-react";
+import { ArrowUpRight, Menu, Moon, Sun, X } from "lucide-react";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 
 import { profile, socialLinks } from "@/data/profile";
 
@@ -17,20 +18,23 @@ const navItems = [
 ] as const;
 
 function ThemeToggle() {
-  const [theme, setTheme] = useState<"dark" | "light">(() => {
-    if (typeof window === "undefined") {
-      return "dark";
-    }
+  const [theme, setTheme] = useState<"dark" | "light">("dark");
 
+  useEffect(() => {
     const savedTheme = window.localStorage.getItem("theme");
-    const preferredDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-    return savedTheme === "light" || savedTheme === "dark"
+    const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+    const nextTheme = savedTheme === "light" || savedTheme === "dark"
       ? savedTheme
-      : preferredDark
-        ? "dark"
-        : "light";
-  });
+      : preferredTheme;
+
+    document.documentElement.classList.toggle("light", nextTheme === "light");
+    window.localStorage.setItem("theme", nextTheme);
+    const themeUpdate = window.setTimeout(() => setTheme(nextTheme), 0);
+
+    return () => window.clearTimeout(themeUpdate);
+  }, []);
 
   useEffect(() => {
     document.documentElement.classList.toggle("light", theme === "light");
@@ -56,7 +60,7 @@ function ThemeToggle() {
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("about");
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -79,7 +83,9 @@ export function Navbar() {
           .filter((entry) => entry.isIntersecting)
           .sort((first, second) => second.intersectionRatio - first.intersectionRatio)[0];
 
-        if (visibleSection) {
+        if (window.scrollY < window.innerHeight * 0.5) {
+          setActiveSection("");
+        } else if (visibleSection) {
           setActiveSection(visibleSection.target.id);
         }
       },
@@ -106,7 +112,7 @@ export function Navbar() {
           href="/"
           className="group flex shrink-0 items-center gap-2.5 text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
         >
-          <span className="text-base font-semibold tracking-[-0.04em]">Jeevan</span>
+          <span className="brand-name">Jeevan</span>
         </Link>
 
         <div className="hidden items-center gap-0.5 lg:flex">
@@ -135,7 +141,7 @@ export function Navbar() {
                 aria-label={item.ariaLabel}
                 className="icon-button"
               >
-                {item.label === "GitHub" ? <Code2 size={16} /> : <Link2 size={16} />}
+                {item.label === "GitHub" ? <FaGithub size={16} /> : <FaLinkedinIn size={16} />}
               </Link>
             ))}
 
@@ -195,7 +201,7 @@ export function Navbar() {
                   onClick={closeMenu}
                   className="mobile-social-link"
                 >
-                  {item.label === "GitHub" ? <Code2 size={15} /> : <Link2 size={15} />}
+                  {item.label === "GitHub" ? <FaGithub size={15} /> : <FaLinkedinIn size={15} />}
                 </Link>
               ))}
 

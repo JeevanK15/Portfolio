@@ -24,7 +24,7 @@ export const projects: Project[] = [
       "Beginner-friendly debugging experience",
     ],
     isPublic: false,
-    gallery: ["/images/projects/pycheck-placeholder.svg", "/images/projects/pycheck-editor.svg"],
+    gallery: [],
   },
   {
     id: "trickbills",
@@ -50,6 +50,6 @@ export const projects: Project[] = [
       "Expense insight generation",
     ],
     isPublic: true,
-    gallery: ["/images/projects/trickbills-placeholder.svg", "/images/projects/trickbills-dashboard.svg"],
+    gallery: [],
   },
 ];

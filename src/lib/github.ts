@@ -19,9 +19,11 @@ export type GitHubRepo = {
   updated_at: string;
 };
 
+const githubUsername = "jeevank15";
+
 export async function getGithubProfile(): Promise<GitHubUser | null> {
   try {
-    const response = await fetch("https://api.github.com/users/jeevank15", {
+    const response = await fetch(`https://api.github.com/users/${githubUsername}`, {
       next: { revalidate: 3600 },
       headers: {
         Accept: "application/vnd.github+json",
@@ -40,7 +42,7 @@ export async function getGithubProfile(): Promise<GitHubUser | null> {
 
 export async function getGithubRepos(): Promise<GitHubRepo[]> {
   try {
-    const response = await fetch("https://api.github.com/users/jeevank15/repos?per_page=6&sort=updated", {
+    const response = await fetch(`https://api.github.com/users/${githubUsername}/repos?per_page=6&sort=updated`, {
       next: { revalidate: 3600 },
       headers: {
         Accept: "application/vnd.github+json",
@@ -51,7 +53,14 @@ export async function getGithubRepos(): Promise<GitHubRepo[]> {
       return [];
     }
 
-    return (await response.json()) as GitHubRepo[];
+    const repositories = (await response.json()) as GitHubRepo[];
+    return repositories.map((repository) => ({
+      ...repository,
+      html_url: repository.html_url.replace(
+        /^https:\/\/github\.com\/[^/]+/i,
+        `https://github.com/${githubUsername}`,
+      ),
+    }));
   } catch {
     return [];
   }

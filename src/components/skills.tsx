@@ -1,48 +1,5 @@
+import { Code2, Database, Palette, Server, Wrench, BarChart3 } from "lucide-react";
 import { skillGroups } from "@/data/skills";
 
-const strongestSkills = new Set(["Python", "HTML", "CSS", "Figma"]);
-
-export function Skills() {
-  return (
-    <section id="skills" className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
-      <div className="mb-10 max-w-2xl">
-        <p className="mb-4 text-xs font-medium uppercase tracking-[0.24em] text-muted-foreground">
-          02 / Skills · Tools I build with
-        </p>
-        <h2 className="text-3xl font-semibold tracking-[-0.05em] text-foreground sm:text-4xl">
-          Practical skills built through problem solving and hands-on learning.
-        </h2>
-      </div>
-
-      <div className="space-y-8">
-        {skillGroups.map((group) => (
-          <div key={group.title} className="skill-group rounded-[1.5rem] border border-border bg-card/60 p-5 shadow-[var(--shadow)] backdrop-blur-sm sm:p-6">
-            <h3 className="mb-4 text-xs font-medium uppercase tracking-[0.24em] text-muted-foreground">
-              {group.title}
-            </h3>
-
-            <div className="flex flex-wrap gap-3">
-              {group.items.map((item) => {
-                const isStrong = strongestSkills.has(item);
-
-                return (
-                  <span
-                    key={item}
-                    className={[
-                      "skill-chip rounded-full border px-3 py-2 text-sm font-medium transition duration-200 ease-out hover:-translate-y-0.5 hover:border-accent/60 hover:text-foreground",
-                      isStrong
-                        ? "border-accent/40 bg-accent/10 text-accent"
-                        : "border-border bg-background/30 text-muted-foreground",
-                    ].join(" ")}
-                  >
-                    {item}
-                  </span>
-                );
-              })}
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
+const icons = [Code2, Palette, Server, Database, BarChart3, Wrench];
+export function Skills() { return <section id="skills" className="section-wrap"><div className="section-head"><span className="section-index">02</span><div><h2>A toolbox for making ideas real.</h2><p>Skills / systems I work with</p><div className="hairline mt-6" /></div></div><div className="skills-layout"><div><p className="technical-label">No invented scores</p><p className="mt-5 max-w-sm text-2xl leading-tight text-foreground">The useful part is knowing what each tool is good for, and how they connect.</p><p className="mt-5 max-w-sm leading-7 text-muted">A growing set of technologies shaped by coursework, internships, and hands-on projects.</p></div><div className="skill-cluster">{skillGroups.map((group, index) => { const Icon = icons[index] ?? Code2; return <article key={group.title} className="skill-module"><Icon size={18} className="text-accent" /><h3>{group.title.replace("Programming Languages", "Programming").replace("Tools / Design", "Tools / Design")}</h3><div className="skill-tags">{group.items.map((item) => <span key={`${group.title}-${item}`}>{item}</span>)}</div></article>; })}</div></div></section>; }

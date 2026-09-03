@@ -16,7 +16,9 @@ export async function GitHubSection() {
     avatar_url: "/images/profile/profile-placeholder.svg",
   };
 
-  const repos = (await getGithubRepos()).slice(0, 3);
+  const repos = (await getGithubRepos())
+    .filter((repo) => !/summar|summerai/i.test(repo.name))
+    .slice(0, 3);
 
   return (
     <section id="github" className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">

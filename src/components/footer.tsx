@@ -25,7 +25,7 @@ export function Footer() {
 
   return (
     <footer className="site-footer">
-      <div className="footer-grid-mark" aria-hidden="true" />
+      <div className="footer-word" aria-hidden="true">JEEVAN K</div>
       <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="footer-intro reveal-on-view">
           <p className="section-kicker">Open to meaningful work</p>
@@ -44,7 +44,6 @@ export function Footer() {
         <div className="mt-20 grid gap-10 border-t border-border pt-10 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr]">
           <div className="reveal-on-view">
             <div className="flex items-center gap-3">
-              <span className="monogram-mark">JK</span>
               <div>
                 <p className="font-semibold tracking-[-0.02em] text-foreground">{profile.name}</p>
                 <p className="text-xs text-muted-foreground">{profile.tagline}</p>

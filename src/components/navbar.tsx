@@ -106,8 +106,7 @@ export function Navbar() {
           href="/"
           className="group flex shrink-0 items-center gap-2.5 text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
         >
-          <span className="monogram-mark">JK</span>
-          <span className="hidden text-sm font-semibold tracking-[-0.02em] sm:inline">Jeevan K</span>
+          <span className="text-base font-semibold tracking-[-0.04em]">Jeevan</span>
         </Link>
 
         <div className="hidden items-center gap-0.5 lg:flex">

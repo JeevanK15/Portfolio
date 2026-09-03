@@ -110,6 +110,13 @@ export function Navbar() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-3 py-2.5 sm:px-4" aria-label="Main navigation">
         <Link
           href="/"
+          onClick={(event) => {
+            event.preventDefault();
+            setIsMenuOpen(false);
+            setActiveSection("");
+            window.history.replaceState(null, "", window.location.pathname + window.location.search);
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
           className="group flex shrink-0 items-center gap-2.5 text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
         >
           <span className="brand-name">Jeevan</span>

@@ -12,6 +12,7 @@ import { Hero } from "@/components/hero";
 import { Leadership } from "@/components/leadership";
 import { Navbar } from "@/components/navbar";
 import { Projects } from "@/components/projects";
+import { Preloader } from "@/components/preloader";
 import { Reveal } from "@/components/reveal";
 import { ScrollProgress } from "@/components/scroll-progress";
 import { Skills } from "@/components/skills";
@@ -19,6 +20,7 @@ import { Skills } from "@/components/skills";
 export default function Home() {
   return (
     <>
+      <Preloader />
       <Cursor />
       <ScrollProgress />
       <Navbar />

@@ -15,7 +15,7 @@ export const profile: Profile = {
   githubUrl: "https://github.com/jeevank15",
   linkedinUrl: "https://linkedin.com/in/jeevank15",
   instagramUrl: "",
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "resume.pdf",
 };
 
 export const socialLinks: SocialLink[] = [

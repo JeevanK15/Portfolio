@@ -179,7 +179,8 @@ section[id] { scroll-margin-top: 7rem; }
 @keyframes watermark-in { from { opacity: 0; transform: translateX(8vw); } to { opacity: 1; transform: none; } }
 @keyframes preloader-exit { to { opacity: 0; visibility: hidden; pointer-events: none; } }
 
-@media (max-width: 800px) { .contact-form-footer { align-items: flex-start; flex-direction: column; } .contact-actions { width: 100%; } .contact-actions .cta-button { flex: 1; justify-content: center; } }
+@media (max-width: 800px) { .contact-form-footer { align-items: flex-start; flex-direction: column; } .contact-actions { display: flex; width: 100%; min-width: 0; gap: .65rem; } .contact-actions > a, .contact-actions > button { flex: 1 1 0; min-width: 0; justify-content: center; white-space: normal; text-align: center; } .contact-actions > button { order: 1; } .contact-actions > a { order: 2; } }
+@media (max-width: 480px) { .contact-actions { flex-direction: column; gap: .8rem; } .contact-actions > a, .contact-actions > button { width: 100%; flex-basis: auto; } }
 @media (max-width: 800px) { .preloader-status { right: 1.5rem; bottom: 7rem; left: 1.5rem; width: auto; } }
 @media (max-width: 480px) { .preloader-topline { gap: .65rem; flex-wrap: wrap; } .preloader-topline span:last-child { flex-basis: 100%; } .preloader-copy strong { flex-direction: column; gap: .35rem; } .preloader-center { gap: 2.25rem; } .preloader-status { bottom: 7rem; } .preloader-steps { font-size: .48rem; } .preloader-coordinates { bottom: 5.5rem; font-size: .48rem; } }
 

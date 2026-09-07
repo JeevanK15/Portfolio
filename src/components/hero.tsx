@@ -61,9 +61,7 @@ export function Hero() {
             <a href="#projects" className="cta-button magnetic">Explore the work <ArrowUpRight size={15} /></a>
             <a href={profile.resumeUrl} target="_blank" rel="noreferrer" className="magnetic inline-flex items-center gap-2 border border-border px-4 py-3 text-sm text-foreground"><Download size={15} /> Resume</a>
           </div>
-          <div className="mt-8 flex items-center gap-3 text-xs text-muted">
-            <span className="h-px w-10 bg-secondary-accent" /> Salem, Tamil Nadu · 2023—2027
-          </div>
+          
         </div>
         <div
           className="hero-core"

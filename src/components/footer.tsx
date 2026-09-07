@@ -16,9 +16,13 @@ export function Footer() {
 	const [copied, setCopied] = useState(false);
 
 	async function copyEmail() {
-		await navigator.clipboard.writeText(profile.email);
-		setCopied(true);
-		window.setTimeout(() => setCopied(false), 1800);
+		try {
+			await navigator.clipboard.writeText(profile.email);
+			setCopied(true);
+			window.setTimeout(() => setCopied(false), 1800);
+		} catch {
+			setCopied(false);
+		}
 	}
 
 	return (

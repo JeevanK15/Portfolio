@@ -10,9 +10,13 @@ export function Contact() {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
   async function copyEmail() {
-    await navigator.clipboard.writeText(profile.email);
-    setCopied(true);
-    window.setTimeout(() => setCopied(false), 1800);
+    try {
+      await navigator.clipboard.writeText(profile.email);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 1800);
+    } catch {
+      setCopied(false);
+    }
   }
 
   async function submitMessage(event: FormEvent<HTMLFormElement>) {

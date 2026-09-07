@@ -16,6 +16,7 @@ import { Preloader } from "@/components/preloader";
 import { Reveal } from "@/components/reveal";
 import { ScrollProgress } from "@/components/scroll-progress";
 import { Skills } from "@/components/skills";
+import { Vesper } from "@/components/vesper";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       <main id="top">
         <Hero />
         <Reveal><About /></Reveal>
+        <Reveal><Vesper /></Reveal>
         <Reveal><Skills /></Reveal>
         <Reveal><Experience /></Reveal>
         <Reveal><Projects /></Reveal>

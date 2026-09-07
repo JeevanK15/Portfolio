@@ -9,6 +9,7 @@ import { profile, socialLinks } from "@/data/profile";
 
 const navItems = [
   { label: "About", href: "#about" },
+  { label: "Vesper", href: "#vesper" },
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },

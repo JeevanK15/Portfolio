@@ -56,6 +56,7 @@ export function Hero() {
             <span className="hero-rotator-word">{rotatingPhrases[phraseIndex]}</span>
           </div>
           <p className="hero-copy">I build ideas into practical digital experiences, combining code, data, and a considered eye for the people using them.</p>
+          <p className="mt-3 text-[9px] uppercase tracking-[0.24em] text-muted/85">Vesper keeps the build flow honest.</p>
           <div className="hero-actions">
             <a href="#projects" className="cta-button magnetic">Explore the work <ArrowUpRight size={15} /></a>
             <a href={profile.resumeUrl} target="_blank" rel="noreferrer" className="magnetic inline-flex items-center gap-2 border border-border px-4 py-3 text-sm text-foreground"><Download size={15} /> Resume</a>

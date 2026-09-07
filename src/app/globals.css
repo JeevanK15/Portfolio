@@ -102,7 +102,7 @@ section[id] { scroll-margin-top: 7rem; }
 @media (max-width: 480px) { .section-wrap { width: min(calc(100% - 1.5rem), var(--page-width)); } .hero-title { font-size: clamp(3.7rem, 19vw, 5.8rem); white-space: normal; } .hero-role { font-size: 1.05rem; } .contact-title { font-size: clamp(2.8rem, 15vw, 5.8rem); } .core-label { font-size: .48rem; } .data-row { grid-template-columns: 6.2rem 1fr; } .skill-cluster { grid-template-columns: 1fr 1fr; } .project-meta { grid-template-columns: 1fr; } .assistant-dock { right: .75rem; bottom: .75rem; width: auto; } .assistant-toggle { margin-bottom: 0; padding: .55rem; } .assistant-toggle-label { display: none; } }
 @media (max-width: 480px) { .footer-directory { grid-template-columns: 1fr; } .footer-identity { grid-column: auto; } .footer-bottom { align-items: flex-start; flex-direction: column; } }
 .brand-name { color: var(--foreground); font: 800 1.65rem/.9 var(--font-display), sans-serif; letter-spacing: -.035em; }
-@media (max-width: 480px) { .brand-name { font-size: 1.25rem; } }
+@media (max-width: 480px) { .brand-name { font-size: 1.1rem; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } .reveal { opacity: 1; transform: none; filter: none; } }
 @media (pointer: coarse), (prefers-reduced-motion: reduce) { .cursor-dot, .cursor-ring { display: none; } }
 

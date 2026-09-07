@@ -31,6 +31,7 @@ export function Footer() {
 						LET&apos;S BUILD<br /><span className="text-accent">SOMETHING MEANINGFUL.</span>
 					</h2>
 					<p className="mt-7 max-w-xl leading-7 text-muted">Building today, learning for tomorrow, and creating thoughtful digital experiences along the way.</p>
+					<p className="mt-4 text-[10px] uppercase tracking-[0.24em] text-muted/80">Powered by Vesper — my everyday build companion.</p>
 					<a href={`mailto:${profile.email}`} className="cta-button mt-8">Start a conversation <MoveUpRight size={15} /></a>
 				</div>
 

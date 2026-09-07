@@ -24,7 +24,7 @@ export default function Home() {
       <Cursor />
       <ScrollProgress />
       <Navbar />
-      <main>
+      <main id="top">
         <Hero />
         <Reveal><About /></Reveal>
         <Reveal><Skills /></Reveal>

@@ -2,7 +2,7 @@ import type { Profile, SocialLink } from "@/types";
 
 export const profile: Profile = {
   name: "Jeevan K",
-  title: "B.Tech AI & Data Science Student",
+  title: "AI & Data Science Student",
   tagline: "Aspiring Full Stack Developer",
   intro:
     "I’m a final-year B.Tech Artificial Intelligence and Data Science student who enjoys building practical web experiences, solving real problems, and continuously improving through projects and learning.",

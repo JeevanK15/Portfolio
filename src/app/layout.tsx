@@ -19,19 +19,19 @@ const displayFont = Syne({
 });
 
 export const metadata: Metadata = {
-  title: "Jeevan K | Full Stack Developer & AI/Data Science Student",
+  title: "Jeevan K | AI & Data Science Student · Aspiring Full Stack Developer",
   description:
     "Portfolio of Jeevan K, a final-year B.Tech AI & Data Science student focused on full stack development, data analytics, and building thoughtful digital experiences.",
   keywords: [
     "Jeevan K",
-    "Full Stack Developer",
+    "Aspiring Full Stack Developer",
     "AI Data Science",
     "Portfolio",
     "Python",
     "Web Development",
   ],
   openGraph: {
-    title: "Jeevan K | Full Stack Developer & AI/Data Science Student",
+    title: "Jeevan K | AI & Data Science Student · Aspiring Full Stack Developer",
     description:
       "Student developer building real-world web projects, data solutions, and polished full stack experiences.",
     type: "website",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jeevan K | Full Stack Developer & AI/Data Science Student",
+    title: "Jeevan K | AI & Data Science Student · Aspiring Full Stack Developer",
     description:
       "Portfolio of Jeevan K, a final-year AI & Data Science student building with Python, web technologies, and analytics.",
   },

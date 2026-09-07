@@ -8,19 +8,23 @@ export function Preloader() {
   const phase = progress < 34 ? "Mapping ideas" : progress < 68 ? "Building experience" : "Ready to explore";
 
   useEffect(() => {
+    const navigationEntry = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming | undefined;
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (navigationEntry?.type === "reload") {
+      const dismissTimer = window.setTimeout(() => setVisible(false), 0);
+      return () => window.clearTimeout(dismissTimer);
+    }
+
     const showTimer = window.setTimeout(() => setVisible(true), 0);
     const progressTimer = window.setInterval(() => {
       setProgress((current) => Math.min(current + 1, 100));
     }, 48);
-    const completeTimer = window.setTimeout(() => setProgress(100), reducedMotion ? 0 : 4800);
-    const timeout = window.setTimeout(() => setVisible(false), reducedMotion ? 0 : 5100);
+    const timeout = window.setTimeout(() => setVisible(false), reducedMotion ? 0 : 5000);
     document.body.classList.add("preloader-active");
 
     return () => {
       window.clearTimeout(showTimer);
       window.clearInterval(progressTimer);
-      window.clearTimeout(completeTimer);
       window.clearTimeout(timeout);
       document.body.classList.remove("preloader-active");
     };

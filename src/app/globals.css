@@ -62,7 +62,7 @@ section[id] { scroll-margin-top: 7rem; }
 .core-label { position: absolute; padding: .45rem .65rem; border-left: 1px solid var(--accent); background: color-mix(in srgb, var(--background) 76%, transparent); color: var(--muted-foreground); font: .58rem/1.3 var(--font-geist-mono), monospace; letter-spacing: .13em; }
 .core-label.one { top: 12%; right: 5%; } .core-label.two { bottom: 20%; left: 3%; } .core-label.three { right: 12%; bottom: 8%; color: var(--secondary-accent); }
 .scroll-cue { position: absolute; bottom: 2.5rem; left: max(1rem, calc((100% - var(--page-width)) / 2)); color: var(--muted); font: .62rem var(--font-geist-mono), monospace; letter-spacing: .18em; text-transform: uppercase; }
-.portrait-frame { position: relative; width: 100%; aspect-ratio: 4 / 5; overflow: hidden; border: 1px solid var(--border); background: linear-gradient(145deg, var(--accent-soft), transparent 50%), var(--card); }
+.portrait-frame { position: relative; width: 100%; aspect-ratio: 4 / 5; overflow: hidden; border: 1px solid var(--border); background: linear-gradient(145deg, var(--accent-soft), transparent 50%), var(--card); } .portrait-image-link { position: absolute; inset: 0; display: block; cursor: zoom-in; }
 .portrait-frame::after { position: absolute; inset: 1rem; border: 1px solid rgba(255,255,255,.18); content: ""; pointer-events: none; }
 .portrait-fallback { position: absolute; inset: 0; display: grid; place-items: center; color: var(--muted); background: radial-gradient(circle at 55% 35%, rgba(139,124,255,.24), transparent 21%), linear-gradient(145deg, #161922, #0d0e12); }
 .portrait-fallback span { border: 1px solid var(--border); padding: .8rem; font: .62rem var(--font-geist-mono), monospace; letter-spacing: .16em; }

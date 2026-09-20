@@ -2,10 +2,10 @@ import type { Profile, SocialLink } from "@/types";
 
 export const profile: Profile = {
   name: "Jeevan K",
-  title: "AI & Data Science Student",
-  tagline: "Aspiring Full Stack Developer",
+  title: "B.Tech AI & Data Science Student",
+  tagline: "Building digital experiences through code, data and design.",
   intro:
-    "I’m a final-year B.Tech Artificial Intelligence and Data Science student who enjoys building practical web experiences, solving real problems, and continuously improving through projects and learning.",
+    "I’m a B.Tech Artificial Intelligence and Data Science student who enjoys building practical web experiences, solving real problems, and continuously improving through projects and learning.",
   currentStatus: "Learning • Building • Experimenting",
   focus: "Full Stack Development",
   mindset: "Learn → Build → Improve",

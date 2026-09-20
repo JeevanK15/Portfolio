@@ -48,20 +48,19 @@ export function Hero() {
     >
       <div className="hero-grid">
         <div>
-          <p className="technical-label animate-pulse">AVAILABLE FOR INTERNSHIPS &amp; PROJECT OPPORTUNITIES</p>
+          <p className="technical-label animate-pulse">SYSTEM INITIALIZING // USER IDENTIFIED</p>
           <h1 className="hero-title">Jeevan <span className="text-accent">K</span></h1>
           <p className="hero-role">{profile.title}<br /><span className="text-foreground">{profile.tagline}</span></p>
           <div className="hero-rotator" aria-live="polite">
-            <span className="hero-rotator-label">I build </span>
+            <span className="hero-rotator-label">VESPER online / </span>
             <span className="hero-rotator-word">{rotatingPhrases[phraseIndex]}</span>
           </div>
-          <p className="hero-copy">I build ideas into practical digital experiences, combining code, data, and a considered eye for the people using them.</p>
+          <p className="hero-copy">I build digital products that balance code, data, and thoughtful user experience — from the first idea to the final working system.</p>
           <p className="mt-3 text-[9px] uppercase tracking-[0.24em] text-muted/85">Vesper keeps the build flow honest.</p>
           <div className="hero-actions">
             <a href="#projects" className="cta-button magnetic">Explore the work <ArrowUpRight size={15} /></a>
             <a href={profile.resumeUrl} target="_blank" rel="noreferrer" className="magnetic inline-flex items-center gap-2 border border-border px-4 py-3 text-sm text-foreground"><Download size={15} /> Resume</a>
           </div>
-          
         </div>
         <div
           className="hero-core"

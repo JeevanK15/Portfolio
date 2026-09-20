@@ -8,8 +8,11 @@ export function Preloader() {
   const phase = progress < 34 ? "Mapping ideas" : progress < 68 ? "Building experience" : "Ready to explore";
 
   useEffect(() => {
-    const navigationEntry = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming | undefined;
+    const navigationEntry = typeof performance !== "undefined"
+      ? (performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming | undefined)
+      : undefined;
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
     if (navigationEntry?.type === "reload") {
       const dismissTimer = window.setTimeout(() => setVisible(false), 0);
       return () => window.clearTimeout(dismissTimer);
